@@ -59,3 +59,13 @@
 | TC-034 | TS-15 | Verify seller can view received message | Buyer has sent message | 1. Login as seller<br>2. Open conversations<br>3. Select related listing conversation | Existing message | Seller can see buyer’s message | Critical | Not Run |
 | TC-035 | TS-21 | Verify user can view active conversations | User has at least one active conversation | 1. Login<br>2. Navigate to conversations page | Existing active conversation | Active conversations are displayed | High | Not Run |
 | TC-036 | TS-21 | Verify user can view past conversations | User has completed/old conversation | 1. Login<br>2. Navigate to conversations page<br>3. View past conversations section | Past conversation | Past conversations are displayed correctly | Medium | Not Run |
+## Feature: Meetup Scheduling
+
+| Test Case ID | Scenario ID | Title | Preconditions | Test Steps | Test Data | Expected Result | Priority | Status |
+|---|---|---|---|---|---|---|---|---|
+| TC-037 | TS-16 | Verify buyer can propose meetup date and time | Buyer and seller have an active conversation | 1. Login as buyer<br>2. Open conversation<br>3. Select meetup date/time<br>4. Submit proposal | Future date/time | Meetup proposal is sent to seller | Critical | Not Run |
+| TC-038 | TS-17 | Verify seller can confirm proposed meetup | Buyer has proposed meetup | 1. Login as seller<br>2. Open conversation<br>3. Review proposal<br>4. Confirm meetup | Existing proposal | Meetup is confirmed successfully | Critical | Not Run |
+| TC-039 | TS-18 | Verify system recommends meetup location based on selected time | User selects meetup time | 1. Open meetup scheduling<br>2. Select date/time<br>3. View recommended location | Valid date/time | System displays recommended meetup location | High | Not Run |
+| TC-040 | TS-19 | Verify selected meetup location is displayed after confirmation | Meetup is confirmed | 1. Confirm meetup<br>2. View meetup details | Confirmed meetup | Selected location, date, and time are displayed correctly | High | Not Run |
+| TC-041 | TS-16 | Verify user cannot propose meetup in the past | User is scheduling meetup | 1. Select past date/time<br>2. Submit proposal | Past date/time | System rejects past meetup time and shows validation message | High | Not Run |
+| TC-042 | TS-17 | Verify meetup status updates after confirmation | Meetup proposal exists | 1. Seller confirms meetup<br>2. Buyer views conversation/meetup status | Confirmed meetup | Meetup status changes from pending to confirmed | High | Not Run |
