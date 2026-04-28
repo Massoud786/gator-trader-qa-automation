@@ -39,3 +39,13 @@
 | TC-022 | TS-10 | Verify user can upload photos when creating listing | User is logged in | 1. Navigate to create listing<br>2. Upload image file<br>3. Submit | Valid image file | Image is uploaded and displayed in listing | Medium | Not Run |
 | TC-023 | TS-09 | Verify newly created listing appears in marketplace | User is logged in and creates listing | 1. Create listing<br>2. Navigate to listings page | Valid listing | Newly created listing is visible in marketplace | Critical | Not Run |
 | TC-024 | TS-10 | Verify system handles large description input | User is logged in | 1. Enter very long description<br>2. Submit | Long text (e.g., 1000+ chars) | System accepts or properly limits input without crashing | Medium | Not Run |
+## Feature: Listing Management (Edit & Delete)
+
+| Test Case ID | Scenario ID | Title | Preconditions | Test Steps | Test Data | Expected Result | Priority | Status |
+|---|---|---|---|---|---|---|---|---|
+| TC-025 | TS-11 | Verify user can edit their own listing | User is logged in and has an existing listing | 1. Login<br>2. Navigate to user's listing<br>3. Click Edit<br>4. Update details<br>5. Save changes | Updated title/price/description | Listing is updated successfully and reflects new data | Critical | Not Run |
+| TC-026 | TS-11 | Verify validation when editing listing with invalid data | User is logged in and has an existing listing | 1. Edit listing<br>2. Enter invalid data (e.g., empty title or invalid price)<br>3. Save | Invalid inputs | System shows validation errors and does not save changes | High | Not Run |
+| TC-027 | TS-12 | Verify user can delete their own listing | User is logged in and has an existing listing | 1. Login<br>2. Navigate to listing<br>3. Click Delete<br>4. Confirm deletion | Existing listing | Listing is removed from marketplace | Critical | Not Run |
+| TC-028 | TS-12 | Verify deleted listing is no longer visible | Listing has been deleted | 1. Delete listing<br>2. Search or browse listings | Deleted listing | Deleted listing does not appear in marketplace results | Critical | Not Run |
+| TC-029 | TS-11 | Verify user cannot edit another user's listing | User is logged in | 1. Attempt to access another user's listing edit page | Another user's listing | System restricts access (error or redirect) | High | Not Run |
+| TC-030 | TS-12 | Verify user cannot delete another user's listing | User is logged in | 1. Attempt to delete another user's listing | Another user's listing | System prevents deletion and shows error/unauthorized message | High | Not Run |
