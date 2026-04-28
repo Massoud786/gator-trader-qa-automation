@@ -69,3 +69,11 @@
 | TC-040 | TS-19 | Verify selected meetup location is displayed after confirmation | Meetup is confirmed | 1. Confirm meetup<br>2. View meetup details | Confirmed meetup | Selected location, date, and time are displayed correctly | High | Not Run |
 | TC-041 | TS-16 | Verify user cannot propose meetup in the past | User is scheduling meetup | 1. Select past date/time<br>2. Submit proposal | Past date/time | System rejects past meetup time and shows validation message | High | Not Run |
 | TC-042 | TS-17 | Verify meetup status updates after confirmation | Meetup proposal exists | 1. Seller confirms meetup<br>2. Buyer views conversation/meetup status | Confirmed meetup | Meetup status changes from pending to confirmed | High | Not Run |
+## Feature: Admin Management
+
+| Test Case ID | Scenario ID | Title | Preconditions | Test Steps | Test Data | Expected Result | Priority | Status |
+|---|---|---|---|---|---|---|---|---|
+| TC-043 | TS-22 | Verify admin can view all listings | Admin is logged in | 1. Login as admin<br>2. Navigate to admin dashboard | Existing listings | All listings are visible to admin | Critical | Not Run |
+| TC-044 | TS-23 | Verify admin can remove inappropriate listing | Admin is logged in and listing exists | 1. Login as admin<br>2. Select listing<br>3. Click Remove | Existing listing | Listing is removed from marketplace | Critical | Not Run |
+| TC-045 | TS-24 | Verify admin can manage meetup locations | Admin is logged in | 1. Navigate to meetup location management<br>2. Add/Edit/Delete location | Location data | Changes are saved successfully | High | Not Run |
+| TC-046 | TS-25 | Verify admin can view meetup activity data | Admin is logged in | 1. Navigate to analytics/dashboard | Existing meetup data | Meetup activity is displayed correctly | Medium | Not Run |
