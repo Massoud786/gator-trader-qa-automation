@@ -19,3 +19,13 @@
 | TC-009 | TS-06 | Verify guest can filter listings by condition | Listings page is available | 1. Open homepage 2. Select item condition 3. Apply filter | Condition: New/Used/Good | Only listings matching the selected condition are displayed | Medium | Not Run |
 | TC-010 | TS-07 | Verify guest can open listing details | At least one listing exists | 1. Open homepage 2. Click a listing | Existing listing | Listing details page displays seller first name, item name, description, price, category, condition, and photos | High | Not Run |
 | TC-011 | TS-08 | Verify guest can navigate to login page | Guest is on homepage | 1. Open homepage 2. Click Login/Sign In | N/A | Login page or Microsoft login option is displayed | High | Not Run |
+## Feature: Registered User Login
+
+| Test Case ID | Scenario ID | Title | Preconditions | Test Steps | Test Data | Expected Result | Priority | Status |
+|---|---|---|---|---|---|---|---|---|
+| TC-013 | TS-08 | Verify registered user can access login page | App is deployed and accessible | 1. Open homepage<br>2. Click Login/Sign In | N/A | Microsoft/SFSU login page or login option is displayed | High | Not Run |
+| TC-014 | TS-08 | Verify registered user can login with valid SFSU email | User has valid SFSU account | 1. Open homepage<br>2. Click Login/Sign In<br>3. Enter valid SFSU credentials<br>4. Submit login | Valid SFSU email/password | User is successfully logged in and redirected to homepage/dashboard | Critical | Not Run |
+| TC-015 | TS-08 | Verify non-SFSU account cannot access protected features | User has non-SFSU account | 1. Open login page<br>2. Attempt login using non-SFSU account | Non-SFSU email | Login is rejected or user cannot access registered-user features | Critical | Not Run |
+| TC-016 | TS-08 | Verify user cannot access protected page without login | User is not logged in | 1. Open browser<br>2. Navigate directly to protected page such as create listing | Protected page URL | User is redirected to login page or shown unauthorized message | Critical | Not Run |
+| TC-017 | TS-08 | Verify user session remains active after page refresh | User is logged in | 1. Login successfully<br>2. Refresh the page | Valid session | User remains logged in after refresh | Medium | Not Run |
+| TC-018 | TS-08 | Verify user can logout successfully | User is logged in | 1. Click Logout<br>2. Try accessing protected feature | N/A | User is logged out and protected features are no longer accessible | High | Not Run |
