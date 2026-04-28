@@ -49,3 +49,13 @@
 | TC-028 | TS-12 | Verify deleted listing is no longer visible | Listing has been deleted | 1. Delete listing<br>2. Search or browse listings | Deleted listing | Deleted listing does not appear in marketplace results | Critical | Not Run |
 | TC-029 | TS-11 | Verify user cannot edit another user's listing | User is logged in | 1. Attempt to access another user's listing edit page | Another user's listing | System restricts access (error or redirect) | High | Not Run |
 | TC-030 | TS-12 | Verify user cannot delete another user's listing | User is logged in | 1. Attempt to delete another user's listing | Another user's listing | System prevents deletion and shows error/unauthorized message | High | Not Run |
+## Feature: In-Site Messaging
+
+| Test Case ID | Scenario ID | Title | Preconditions | Test Steps | Test Data | Expected Result | Priority | Status |
+|---|---|---|---|---|---|---|---|---|
+| TC-031 | TS-14 | Verify user can contact seller from listing page | Buyer is logged in and listing exists | 1. Login as buyer<br>2. Open a listing posted by another user<br>3. Click Contact Seller | Existing listing | Messaging screen opens for buyer and seller conversation | Critical | Not Run |
+| TC-032 | TS-15 | Verify buyer can send message to seller | Buyer is on conversation page | 1. Enter message<br>2. Click Send | “Is this item still available?” | Message is sent and displayed in conversation | Critical | Not Run |
+| TC-033 | TS-15 | Verify empty message cannot be sent | Buyer is on conversation page | 1. Leave message box empty<br>2. Click Send | Empty message | System prevents sending empty message or shows validation message | High | Not Run |
+| TC-034 | TS-15 | Verify seller can view received message | Buyer has sent message | 1. Login as seller<br>2. Open conversations<br>3. Select related listing conversation | Existing message | Seller can see buyer’s message | Critical | Not Run |
+| TC-035 | TS-21 | Verify user can view active conversations | User has at least one active conversation | 1. Login<br>2. Navigate to conversations page | Existing active conversation | Active conversations are displayed | High | Not Run |
+| TC-036 | TS-21 | Verify user can view past conversations | User has completed/old conversation | 1. Login<br>2. Navigate to conversations page<br>3. View past conversations section | Past conversation | Past conversations are displayed correctly | Medium | Not Run |
