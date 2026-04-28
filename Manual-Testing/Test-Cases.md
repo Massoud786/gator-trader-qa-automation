@@ -29,3 +29,13 @@
 | TC-016 | TS-08 | Verify user cannot access protected page without login | User is not logged in | 1. Open browser<br>2. Navigate directly to protected page such as create listing | Protected page URL | User is redirected to login page or shown unauthorized message | Critical | Not Run |
 | TC-017 | TS-08 | Verify user session remains active after page refresh | User is logged in | 1. Login successfully<br>2. Refresh the page | Valid session | User remains logged in after refresh | Medium | Not Run |
 | TC-018 | TS-08 | Verify user can logout successfully | User is logged in | 1. Click Logout<br>2. Try accessing protected feature | N/A | User is logged out and protected features are no longer accessible | High | Not Run |
+## Feature: Listing Creation (Registered User)
+
+| Test Case ID | Scenario ID | Title | Preconditions | Test Steps | Test Data | Expected Result | Priority | Status |
+|---|---|---|---|---|---|---|---|---|
+| TC-019 | TS-09 | Verify user can create a new listing with valid data | User is logged in | 1. Login<br>2. Navigate to "Create Listing"<br>3. Enter all required fields<br>4. Submit | Valid item details | Listing is successfully created and visible in marketplace | Critical | Not Run |
+| TC-020 | TS-10 | Verify required fields validation when creating listing | User is logged in | 1. Navigate to create listing<br>2. Leave required fields empty<br>3. Submit | Empty fields | Validation messages are displayed for required fields | High | Not Run |
+| TC-021 | TS-10 | Verify listing creation with invalid price input | User is logged in | 1. Navigate to create listing<br>2. Enter invalid price (negative or text)<br>3. Submit | Price = -10 or "abc" | System rejects invalid input and shows validation error | High | Not Run |
+| TC-022 | TS-10 | Verify user can upload photos when creating listing | User is logged in | 1. Navigate to create listing<br>2. Upload image file<br>3. Submit | Valid image file | Image is uploaded and displayed in listing | Medium | Not Run |
+| TC-023 | TS-09 | Verify newly created listing appears in marketplace | User is logged in and creates listing | 1. Create listing<br>2. Navigate to listings page | Valid listing | Newly created listing is visible in marketplace | Critical | Not Run |
+| TC-024 | TS-10 | Verify system handles large description input | User is logged in | 1. Enter very long description<br>2. Submit | Long text (e.g., 1000+ chars) | System accepts or properly limits input without crashing | Medium | Not Run |
